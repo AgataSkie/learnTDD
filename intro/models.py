@@ -6,3 +6,8 @@ class Person(models.Model):
 
     def get_short_descr(self, num):
         return self.description[:num]
+
+
+class Comment(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    text = models.TextField()

@@ -22,3 +22,16 @@ class TestPerson:
         short = obj.get_short_descr(10)
         assert len(short) == 10, 'Should return first 10 characters'
         assert short == 'To jest te', 'Should return first 10 characters'
+
+
+class TestComment:
+
+    # comment should have a relation to a person that the comment is about
+    def test_comment_creation(self):
+        person = mixer.blend('intro.Person')
+        comment = mixer.blend('intro.Comment', person=person)
+        assert comment.person is not None
+        assert comment.text is not None
+
+
+    # comment should be created by a user
