@@ -3,3 +3,4 @@ htmlcov
 .idea
 db*
 *migrations*
+.coverage
