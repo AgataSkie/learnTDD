@@ -1,0 +1,5 @@
+htmlcov
+.cache
+.idea
+db*
+*migrations*
