@@ -34,4 +34,9 @@ class TestComment:
         assert comment.text is not None
 
 
-    # comment should be created by a user
+class TestContactMessage:
+
+    def test_contact_message_creation(self):
+        message = mixer.blend('intro.ContactMessage')
+        assert message.text is not None
+        assert message.email is not None
